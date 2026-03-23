@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'django_mvt.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'biblioteca',
+        'NAME': 'catalogo_filmes',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost',

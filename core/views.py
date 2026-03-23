@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Livro
+from .models import Filme
 
-def lista_livros(request):
-    livros = Livro.objects.all()
-    return render(request, 'livros/lista.html', {'livros': livros})
+def lista_filmes(request):
+    filmes = Filme.objects.all()
+    return render(request, 'filmes/lista.html', {'filmes': filmes})

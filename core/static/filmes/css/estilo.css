@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: #f1f5f9;
+    margin: 0;
+}
+
+/* TÍTULO */
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 32px;
+    color: #38bdf8;
+}
+
+/* CONTAINER */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+/* CARD */
+.card {
+    background: #1e293b;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    
+    display: flex;              /* 🔥 NOVO */
+    flex-direction: column;     /* 🔥 NOVO */
+    height: 100%;               /* 🔥 NOVO */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+}
+
+/* IMAGEM PADRÃO (ESTILO POSTER) */
+.card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* CONTEÚDO */
+.card-content {
+    padding: 15px;
+
+    display: flex;                 /* 🔥 NOVO */
+    flex-direction: column;        /* 🔥 NOVO */
+    justify-content: space-between;/* 🔥 NOVO */
+    flex-grow: 1;                  /* 🔥 NOVO */
+}
+
+.card-content h2 {
+    font-size: 18px;
+    color: #facc15;
+    margin-bottom: 8px;
+}
+
+/* DESCRIÇÃO CONTROLADA */
+.card-content p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #cbd5f5;
+
+    overflow: hidden;              /* 🔥 NOVO */
+    display: -webkit-box;          /* 🔥 NOVO */
+    -webkit-line-clamp: 3;         /* 🔥 NOVO */
+    -webkit-box-orient: vertical;  /* 🔥 NOVO */
+}
+
+/* TAG DO ANO */
+.ano {
+    display: inline-block;
+    margin-top: 10px;              /* 🔥 NOVO */
+
+    background: #38bdf8;
+    color: #020617;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.header {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}

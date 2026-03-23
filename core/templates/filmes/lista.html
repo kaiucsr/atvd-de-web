@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+<link rel="stylesheet" href="{% static 'filmes/css/estilo.css' %}">
+
+<!-- 🔥 TÍTULO SEPARADO -->
+<div class="header">
+    <h1>🎬 Catálogo de Filmes</h1>
+</div>
+
+<!-- 🔥 LISTA DE FILMES -->
+<div class="container">
+  {% for filme in filmes %}
+    <div class="card">
+
+      {% if filme.imagem %}
+        <img src="{{ filme.imagem.url }}" alt="{{ filme.titulo }}">
+      {% endif %}
+
+      <div class="card-content">
+        <h2>{{ filme.titulo }}</h2>
+        <p>{{ filme.descricao|truncatechars:100 }}</p>
+        <span class="ano">{{ filme.ano_lancamento }}</span>
+      </div>
+
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
